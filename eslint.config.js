@@ -5,6 +5,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import jsxA11Y from 'eslint-plugin-jsx-a11y'
 import globals from 'globals';
 import prettierConfig from "eslint-config-prettier";
+import jsxA11Y from 'eslint-plugin-jsx-a11y';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [

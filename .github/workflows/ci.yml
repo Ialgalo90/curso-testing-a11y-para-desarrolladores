@@ -24,3 +24,15 @@ jobs:
         run: npm run prettier -- --check
       - name: Lint (ESLint) 🔦
         run: npm run lint
+
+      - name: Run testing-library test
+        run: npm run test:testing-library
+
+      - name: Publish testing-library report
+        uses: dorny/test-reporter@2
+        if: always()
+        with:
+          name: Testing library tests
+          badge-title: Testing library tests
+          path: reports/testing-library.xml
+          reporter: jest-junit
